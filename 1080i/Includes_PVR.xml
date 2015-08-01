@@ -116,7 +116,7 @@
             <top>206</top>
             <height>660</height>
             <control type="group">
-                <height>330</height>
+                <height>370</height>
                 <control type="image">
                     <width>100%</width>
                     <height>100%</height>
@@ -167,7 +167,7 @@
                 <height>330</height>
                 
                 <control type="label">
-                    <top>10</top>
+                    <top>50</top>
                     <aligny>center</aligny>
                     <height>64</height>
                     <font>SmallBold</font>
@@ -176,7 +176,7 @@
                     <label>$INFO[ListItem.Title]</label>
                 </control>
                 <control type="label">
-                    <top>50</top>
+                    <top>90</top>
                     <height>64</height>
                     <aligny>center</aligny>
                     <font>Tiny</font>
@@ -185,7 +185,7 @@
                     <label fallback="19055">$INFO[ListItem.Genre]</label>
                 </control>
                 <control type="textbox">
-                    <top>125</top>
+                    <top>165</top>
                     <bottom>17</bottom>
                     <align>justify</align>
                     <font>Tiny</font>
