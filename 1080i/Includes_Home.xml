@@ -13,7 +13,6 @@
                 <top>0</top>
                 <height>240</height>
                 <aspectratio aligny="top">scale</aspectratio>
-                <texture colordiffuse="Background">common/bg.jpg</texture>
                 <animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
             </control>
             <control type="image" description="FanartOverlay">
@@ -284,7 +283,6 @@
                 <top>0</top>
                 <height>100</height>
                 <aspectratio aligny="top">scale</aspectratio>
-                <texture colordiffuse="Background">common/bg.jpg</texture>
                 <animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
             </control>
             <control type="image" description="FanartOverlay">
@@ -650,7 +648,6 @@
                 <height>220</height>
                 <bottom>0</bottom>
                 <aspectratio aligny="bottom">scale</aspectratio>
-                <texture colordiffuse="Background">common/bg.jpg</texture>
                 <animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
             </control>
             <control type="image" description="FanartOverlay">
@@ -938,7 +935,6 @@
                         <height>900</height>
                         <bottom>-680</bottom>
                         <aspectratio aligny="bottom">scale</aspectratio>
-                        <texture colordiffuse="Background">common/bg.jpg</texture>
                         <animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
                     </control>
                     <control type="image" description="FanartOverlay">
@@ -1701,7 +1697,7 @@
                         <control type="textbox">
                             <font>Tiny</font>
                             <width>100%</width>
-                            <height>95</height>
+                            <height>155</height>
                             <align>left</align>
                             <textcolor>Dark2</textcolor>
                             <label>$VAR[WidgetPlot]</label>
@@ -2070,8 +2066,8 @@
                     </control>
                     <!-- Widget -->
                     <control type="fixedlist" id="301">
-                        <visible>!StringCompare(Container(300).ListItem.Property(widget),NextAired) + !StringCompare(Container(300).ListItem.Property(widget),Favourites) + !substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
-                        <visible allowhiddenfocus="true">IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+                        <visible>!StringCompare(Container(300).ListItem.Property(widget),NextAired) + !StringCompare(Container(300).ListItem.Property(widget),Favourites) + !substring(Container(300).ListItem.Property(widget),Weather,left) + !substring(Container(300).ListItem.Property(widget),Custom1) + !substring(Container(300).ListItem.Property(widget),RecentEpisodes)</visible>
+                        <visible allowhiddenfocus="false">IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                         <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                         <include>Animation.FadeIn</include>
                         <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
@@ -2234,15 +2230,14 @@
                         <content target="video">$VAR[DefWidgetContent]</content>
                     </control>
                     <control type="fixedlist" id="301">
-                        <visible>StringCompare(Container(300).ListItem.Property(widget),NextAired) | StringCompare(Container(300).ListItem.Property(widget),Favourites)</visible>
-                        <visible allowhiddenfocus="true">IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+                        <visible>!StringCompare(Container(300).ListItem.Property(widget),NextAired) + !StringCompare(Container(300).ListItem.Property(widget),Favourites) + !substring(Container(300).ListItem.Property(widget),Weather,left) + [substring(Container(300).ListItem.Property(widget),Custom1) | substring(Container(300).ListItem.Property(widget),RecentEpisodes)]</visible>
+						<visible allowhiddenfocus="false">IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                         <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                         <include>Animation.FadeIn</include>
-                        <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
-                        <top>330</top>
+                        <top>370</top>
                         <left>518</left>
                         <width>1554</width>
-                        <height>674</height>
+                        <height>325</height>
                         <onback>300</onback>
                         <onleft>300</onleft>
                         <onup>300</onup>
@@ -2253,7 +2248,7 @@
                         <pagecontrol>60</pagecontrol>
                         <viewtype label="536">list</viewtype>
                         <scrolltime tween="quadratic">400</scrolltime>
-                        <itemlayout height="325" width="222" condition="StringCompare(Container(300).ListItem.Property(widget),NextAired)">
+                        <itemlayout height="264" width="470" condition="!substring(Container(300).ListItem.Property(widget),Albums)">
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -2267,7 +2262,7 @@
                                 <right>10</right>
                                 <bottom>10</bottom>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
-                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[PosterImage]</texture>
+                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[ThumbImage]</texture>
                             </control>
                             <control type="image">
                                 <centerright>32</centerright>
@@ -2280,7 +2275,7 @@
                                 <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
                             </control>
                         </itemlayout>
-                        <itemlayout height="325" width="325" condition="!StringCompare(Container(300).ListItem.Property(widget),NextAired)">
+                        <itemlayout height="264" width="470" condition="substring(Container(300).ListItem.Property(widget),Albums)">
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -2294,7 +2289,7 @@
                                 <right>10</right>
                                 <bottom>10</bottom>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
-                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[PosterImage]</texture>
+                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[ThumbImage]</texture>
                             </control>
                             <control type="image">
                                 <centerright>32</centerright>
@@ -2307,7 +2302,7 @@
                                 <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="325" width="222" condition="StringCompare(Container(300).ListItem.Property(widget),NextAired)">
+                        <focusedlayout height="264" width="470" condition="!substring(Container(300).ListItem.Property(widget),Albums)">
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -2321,7 +2316,7 @@
                                 <right>10</right>
                                 <bottom>10</bottom>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
-                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[PosterImage]</texture>
+                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[ThumbImage]</texture>
                             </control>
                             <control type="image">
                                 <centerright>32</centerright>
@@ -2351,7 +2346,7 @@
                             </control>
                               
                         </focusedlayout>
-                        <focusedlayout height="325" width="325" condition="!StringCompare(Container(300).ListItem.Property(widget),NextAired)">
+                        <focusedlayout height="264" width="470" condition="substring(Container(300).ListItem.Property(widget),Albums)">
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -2365,7 +2360,7 @@
                                 <right>10</right>
                                 <bottom>10</bottom>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
-                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[PosterImage]</texture>
+                                <texture diffuse="diffuse/wall.png" background="true" fallback="DefaultMovies.png">$VAR[ThumbImage]</texture>
                             </control>
                             <control type="image">
                                 <centerright>32</centerright>
@@ -2395,7 +2390,7 @@
                             </control>
                               
                         </focusedlayout>
-                        <content target="video"><include>DefNextAiredWidget</include><include>DefFavouritesWidget</include></content>
+                        <content target="video">$VAR[DefWidgetContent]</content>
                     </control>
                 </control>
             </control>

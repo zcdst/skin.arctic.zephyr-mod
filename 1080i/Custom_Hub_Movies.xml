@@ -30,7 +30,6 @@
                         <width>1122</width>
                         <top>0</top>
                         <bottom>0</bottom>
-                        <texture background="true" diffuse="diffuse/home-fanart.png">pvr/background.jpg</texture>
                         <visible>!IntegerGreaterThan(Container(9500).NumItems,0)</visible>
                     </control>
                     <control type="wraplist" id="9500">

@@ -29,7 +29,6 @@
             <top>0</top>
             <bottom>10</bottom>
             <aspectratio>scale</aspectratio>
-            <texture fallback="pvr/background.jpg">$VAR[GlobalSearchArt]</texture>
         </control>
         <control type="image">
             <left>0</left>
@@ -56,7 +55,6 @@
             <top>0</top>
             <bottom>10</bottom>
             <aspectratio>scale</aspectratio>
-            <texture fallback="pvr/background.jpg">$VAR[GlobalSearchArt]</texture>
         </control>
         <control type="image">
             <left>0</left>

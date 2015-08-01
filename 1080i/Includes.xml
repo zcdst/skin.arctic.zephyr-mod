@@ -112,7 +112,6 @@
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(home.slideshowpath)) + [substring(Container(300).ListItem.Property(widget),Weather,left) | IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating |  Skin.HasSetting(home.dontshowfanart)]">$INFO[Skin.String(home.slideshowpath)]</value>
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(weather.fanart)) + Skin.HasSetting(home.showweatherfanart) + [IsEmpty(Container(300).ListItem.Property(widget)) | Container(301).IsUpdating]">$INFO[Skin.String(weather.fanart)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
         <value condition="Window.IsVisible(home) + !Container(301).IsUpdating + !IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
-        <value condition="Window.IsVisible(home) + !Container(301).IsUpdating">pvr/background.jpg</value>
         <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart))">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Property(Fanart_Image))">$INFO[ListItem.Property(Fanart_Image)]</value>
@@ -124,7 +123,6 @@
     <include name="GlobalVideoWindow">
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
-            <texture colordiffuse="Background">common/bg.jpg</texture>
         </control>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -166,7 +164,6 @@
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
             <include condition="!Skin.HasSetting(home.vertical)">Animation.FadeFromHome</include>
-            <texture colordiffuse="Background">common/bg.jpg</texture>
             <visible>!Window.IsVisible(home) | Skin.HasSetting(home.vertical)</visible>
             <animation effect="fade" start="100" end="75" time="200" condition="Player.HasVideo + Skin.HasSetting(global.showvideo) | Player.HasAudio + Skin.HasSetting(global.showvisualisation)">Conditional</animation>
         </control>
@@ -197,7 +194,6 @@
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
             <include condition="!Skin.HasSetting(home.vertical)">Animation.FadeFromHome</include>
-            <texture colordiffuse="Background">common/bg.jpg</texture>
         </control>
         <control type="multiimage" description="Fanart">
             <include>GlobalBackgroundFade</include>
