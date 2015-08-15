@@ -148,7 +148,6 @@
                     <bottom>10</bottom>
                     <fadetime>200</fadetime>
                     <aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
-                    <texture diffuse="diffuse/pvrinfo.png" background="true" fallback="pvr/background.jpg">$INFO[ListItem.Thumb]</texture>
                     <visible>!Player.HasVideo</visible>
                     <visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
                 </control>
