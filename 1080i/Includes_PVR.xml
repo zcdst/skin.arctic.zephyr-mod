@@ -147,12 +147,8 @@
                     <right>10</right>
                     <bottom>10</bottom>
                     <fadetime>200</fadetime>
-<<<<<<< HEAD
-                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
-=======
                     <aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
                     <texture diffuse="diffuse/pvrinfo.png" background="true" fallback="pvr/background.jpg">$INFO[ListItem.Thumb]</texture>
->>>>>>> 9ec1a6aa8521afcb907a28f09066189126ec93bb
                     <visible>!Player.HasVideo</visible>
                     <visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
                 </control>
@@ -174,11 +170,7 @@
                 <height>290</height>
                 
                 <control type="label">
-<<<<<<< HEAD
-                    <top>50</top>
-=======
                     <top>8</top>
->>>>>>> 9ec1a6aa8521afcb907a28f09066189126ec93bb
                     <aligny>center</aligny>
                     <height>64</height>
                     <font>SmallBold</font>
@@ -187,11 +179,7 @@
                     <label>$INFO[ListItem.Title]</label>
                 </control>
                 <control type="label">
-<<<<<<< HEAD
-                    <top>90</top>
-=======
                     <top>48</top>
->>>>>>> 9ec1a6aa8521afcb907a28f09066189126ec93bb
                     <height>64</height>
                     <aligny>center</aligny>
                     <font>Tiny</font>
@@ -200,11 +188,7 @@
                     <label fallback="19055">$INFO[ListItem.Genre]</label>
                 </control>
                 <control type="textbox">
-<<<<<<< HEAD
-                    <top>165</top>
-=======
                     <top>116</top>
->>>>>>> 9ec1a6aa8521afcb907a28f09066189126ec93bb
                     <bottom>17</bottom>
                     <align>justify</align>
                     <font>Tiny</font>
