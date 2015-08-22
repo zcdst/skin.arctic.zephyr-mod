@@ -165,6 +165,17 @@
             <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
             <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
         </control>
+        <control type="image" description="Fanart Fallback always">
+            <include>GlobalBackgroundFade</include>
+            <visible>!Player.HasMedia | [!Skin.HasSetting(global.showvideo) + Player.HasVideo] | [!Skin.HasSetting(global.showvisualisation) + Player.HasAudio]</visible>
+            <include>Dimensions_Fullscreen</include>
+            <visible>!Window.IsVisible(home) + Skin.HasSetting(global.hidefanart) + !IsEmpty(Skin.String(fanart.fallback))</visible>
+            <include>Animation.FadeFromHome</include>
+            <aspectratio>scale</aspectratio>
+            <texture background="true">$INFO[Skin.String(fanart.fallback)]</texture>
+            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
+            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
+        </control>
         <control type="image" description="FanartOverlay">
             <include>Dimensions_Fullscreen</include>
             <visible>!Window.IsVisible(home) | Skin.HasSetting(home.vertical)</visible>
