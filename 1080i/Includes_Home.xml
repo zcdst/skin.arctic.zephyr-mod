@@ -371,11 +371,21 @@
 
             <control type="image">
                 <description>Busy animation</description>
-                <posx>30</posx>
-                <posy>30</posy>
-                <width>48</width>
-                <height>48</height>
-                <texture colordiffuse="$VAR[ColorHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+                <centerleft>54</centerleft>
+                <centertop>54</centertop>
+                <width>100</width>
+                <height>100</height>
+                <texture>dialog/loading-back.png</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+            <control type="image">
+                <description>Busy animation</description>
+                <centerleft>54</centerleft>
+                <centertop>54</centertop>
+                <width>100</width>
+                <height>100</height>
+                <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                 <aspectratio>keep</aspectratio>
             </control>
 
@@ -404,6 +414,8 @@
                 <visible>!StringCompare(Container(300).ListItem.Property(widget),Favourites)</visible>
                 <width>1</width>
                 <height>1</height>
+                <oninfo condition="IsEmpty(Container(301).ListItem.TvShowTitle) + IsEmpty(Container(301).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Title],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+                <oninfo condition="!IsEmpty(Container(301).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
                 <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
                 <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
                 <ondown>300</ondown>
@@ -427,6 +439,8 @@
                 <visible>StringCompare(Container(300).ListItem.Property(widget),NextAired) | StringCompare(Container(300).ListItem.Property(widget),Favourites)</visible>
                 <width>1</width>
                 <height>1</height>
+                <oninfo condition="IsEmpty(Container(301).ListItem.TvShowTitle) + IsEmpty(Container(301).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Title],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+                <oninfo condition="!IsEmpty(Container(301).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
                 <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
                 <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
                 <ondown>300</ondown>
@@ -973,6 +987,8 @@
                         <right>70</right>
                         <top>20</top>
                         <bottom>20</bottom>
+                        <oninfo condition="IsEmpty(Container(301).ListItem.TvShowTitle) + IsEmpty(Container(301).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Title],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+                        <oninfo condition="!IsEmpty(Container(301).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
                         <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
                         <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
                         <ondown>300</ondown>
@@ -1070,6 +1086,8 @@
                         <right>70</right>
                         <top>20</top>
                         <bottom>20</bottom>
+                        <oninfo condition="IsEmpty(Container(301).ListItem.TvShowTitle) + IsEmpty(Container(301).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Title],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+                        <oninfo condition="!IsEmpty(Container(301).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
                         <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
                         <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
                         <ondown>300</ondown>
@@ -1167,11 +1185,21 @@
                     
                         <control type="image">
                             <description>Busy animation</description>
-                            <posx>30</posx>
-                            <posy>30</posy>
-                            <width>48</width>
-                            <height>48</height>
-                            <texture colordiffuse="$VAR[ColorHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+                            <centerleft>54</centerleft>
+                            <centertop>54</centertop>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>dialog/loading-back.png</texture>
+                            <aspectratio>keep</aspectratio>
+                        </control>
+                        <control type="image">
+                            <description>Busy animation</description>
+                            <centerleft>54</centerleft>
+                            <centertop>54</centertop>
+                            <width>100</width>
+                            <height>100</height>
+                            <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                            <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                             <aspectratio>keep</aspectratio>
                         </control>
 
@@ -1642,11 +1670,21 @@
                     <include>Animation.FadeOut</include>
                     <control type="image">
                         <description>Busy animation</description>
-                        <posx>30</posx>
-                        <posy>30</posy>
-                        <width>48</width>
-                        <height>48</height>
-                        <texture colordiffuse="$VAR[ColorHighlight]" fallback="special://skin/extras/spinners/flower.gif">$INFO[Skin.String(busyloader)]</texture>
+                        <centerleft>54</centerleft>
+                        <centertop>54</centertop>
+                        <width>100</width>
+                        <height>100</height>
+                        <texture>dialog/loading-back.png</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>Busy animation</description>
+                        <centerleft>54</centerleft>
+                        <centertop>54</centertop>
+                        <width>100</width>
+                        <height>100</height>
+                        <animation effect="rotate" condition="true" start="0" end="360" loop="true" time="1000" center="auto">Conditional</animation>
+                        <texture colordiffuse="$VAR[ColorHighlight]">dialog/loading-spinner.png</texture>
                         <aspectratio>keep</aspectratio>
                     </control>
                     <control type="label">
@@ -2079,6 +2117,8 @@
                         <onleft>300</onleft>
                         <onup>300</onup>
                         <ondown>300</ondown>
+                        <oninfo condition="IsEmpty(Container(301).ListItem.TvShowTitle) + IsEmpty(Container(301).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Title],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+                        <oninfo condition="!IsEmpty(Container(301).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
                         <focusposition>0</focusposition>
                         <preloaditems>2</preloaditems>
                         <orientation>horizontal</orientation>
@@ -2242,6 +2282,8 @@
                         <onleft>300</onleft>
                         <onup>300</onup>
                         <ondown>300</ondown>
+                        <oninfo condition="IsEmpty(Container(301).ListItem.TvShowTitle) + IsEmpty(Container(301).ListItem.Artist)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Title],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
+                        <oninfo condition="!IsEmpty(Container(301).ListItem.TvShowTitle)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle],imdb_id=$INFO[Container(301).ListItem.IMDBNumber])</oninfo>
                         <focusposition>0</focusposition>
                         <preloaditems>2</preloaditems>
                         <orientation>horizontal</orientation>
