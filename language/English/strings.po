@@ -651,3 +651,39 @@ msgstr ""
 msgctxt "#31259"
 msgid "Extra fanart"
 msgstr ""
+
+msgctxt "#31260"
+msgid "Set weather icons"
+msgstr ""
+
+msgctxt "#31261"
+msgid "Widget aspect"
+msgstr ""
+
+msgctxt "#31262"
+msgid "Poster"
+msgstr ""
+
+msgctxt "#31263"
+msgid "Square"
+msgstr ""
+
+msgctxt "#31264"
+msgid "Thumbnail"
+msgstr ""
+
+msgctxt "#31265"
+msgid "Fanart"
+msgstr ""
+
+msgctxt "#31266"
+msgid "Widget"
+msgstr ""
+
+msgctxt "#31267"
+msgid "Action"
+msgstr ""
+
+msgctxt "#31268"
+msgid "Label"
+msgstr ""
