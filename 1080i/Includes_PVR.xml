@@ -352,7 +352,7 @@
                                 <font>SmallBold</font>
                                 <textcolor>Dark1</textcolor>
                                 <selectedcolor>Dark1</selectedcolor>
-                                <label>$INFO[ListItem.ChannelNumber,,  ]$INFO[ListItem.ChannelName]</label>
+                                <label>$INFO[ListItem.ChannelNumberLabel,,  ]$INFO[ListItem.ChannelName]</label>
                             </control>
                             <control type="label">
                                 <posx>150</posx>
@@ -489,7 +489,7 @@
                                     <font>SmallBold</font>
                                     <textcolor>Light1</textcolor>
                                     <selectedcolor>Light1</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelNumber,,  ]$INFO[ListItem.ChannelName]</label>
+                                    <label>$INFO[ListItem.ChannelNumberLabel,,  ]$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
                                     <posx>150</posx>
@@ -617,7 +617,7 @@
                                     <font>SmallBold</font>
                                     <textcolor>Dark1</textcolor>
                                     <selectedcolor>Dark1</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelNumber,,  ]$INFO[ListItem.ChannelName]</label>
+                                    <label>$INFO[ListItem.ChannelNumberLabel,,  ]$INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
                                     <posx>150</posx>
@@ -802,7 +802,7 @@
                                 <font>EpisodeNumber</font>
                                 <textcolor>Dark1</textcolor>
                                 <selectedcolor>Dark1</selectedcolor>
-                                <label>$INFO[ListItem.ChannelNumber]</label>
+                                <label>$INFO[ListItem.ChannelNumberLabel]</label>
                             </control>
                             <control type="progress">
                                 <posx>20</posx>
@@ -954,7 +954,7 @@
                                 <font>EpisodeNumber</font>
                                 <textcolor>Light1</textcolor>
                                 <selectedcolor>Light1</selectedcolor>
-                                <label>$INFO[ListItem.ChannelNumber]</label>
+                                <label>$INFO[ListItem.ChannelNumberLabel]</label>
                             </control>
                             <control type="progress">
                                 <posx>20</posx>
@@ -1051,8 +1051,8 @@
     </include>
 
     <variable name="PVRChannelZero">
-        <value condition="!IntegerGreaterThan(ListItem.ChannelNumber,9)">$NUMBER[0]$NUMBER[0]</value>
-        <value condition="!IntegerGreaterThan(ListItem.ChannelNumber,99)">$NUMBER[0]</value>
+        <value condition="!IntegerGreaterThan(ListItem.ChannelNumberLabel,9)">$NUMBER[0]$NUMBER[0]</value>
+        <value condition="!IntegerGreaterThan(ListItem.ChannelNumberLabel,99)">$NUMBER[0]</value>
     </variable>
 
     <include name="PVRView_52">
@@ -1097,7 +1097,7 @@
                         <font>SmallBold</font>
                         <textcolor>Dark1</textcolor>
                         <selectedcolor>Dark1</selectedcolor>
-                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
                     </control>
                     <!-- <control type="label">
                         <left>30</left>
@@ -1108,7 +1108,7 @@
                         <font>SmallBold</font>
                         <textcolor>Dark1</textcolor>
                         <selectedcolor>Dark1</selectedcolor>
-                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumber]</label>
+                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumberLabel]</label>
                     </control> -->
                     <control type="image">
                         <left>30</left>
@@ -1185,7 +1185,7 @@
                         <font>SmallBold</font>
                         <textcolor>Light1</textcolor>
                         <selectedcolor>Light1</selectedcolor>
-                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName]</label>
+                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName]</label>
                     </control>
                     <!-- <control type="label">
                         <left>30</left>
@@ -1196,7 +1196,7 @@
                         <font>SmallBold</font>
                         <textcolor>Light1</textcolor>
                         <selectedcolor>Light1</selectedcolor>
-                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumber]</label>
+                        <label>$VAR[PVRChannelZero]$INFO[ListItem.ChannelNumberLabel]</label>
                     </control> -->
                     <control type="image">
                         <left>30</left>
