@@ -1059,7 +1059,7 @@
                         <onright>301</onright>
                         <preloaditems>2</preloaditems>
                         <orientation>horizontal</orientation>
-                        <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                        <autoscroll>false</autoscroll>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <itemlayout width="178" height="257" condition="!StringCompare(Container(300).ListItem.Property(widgetaspect),Square) + ![StringCompare(Container(300).ListItem.Property(widgetaspect),Fanart) | StringCompare(Container(300).ListItem.Property(widgetaspect),Thumbnail)]">
                             <control type="image">
@@ -2106,7 +2106,7 @@
                         <visible allowhiddenfocus="true">IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                         <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                         <include>Animation.FadeIn</include>
-                        <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                        <autoscroll>false</autoscroll>
                         <top>330</top>
                         <left>518</left>
                         <width>1554</width>
