@@ -68,7 +68,7 @@
         <value condition="stringcompare(ListItem(1).Overlay,OverlayUnwatched.png)">indicator/unwatched.png</value>
     </variable>
     <variable name="PosterImage">
-        <!-- <value condition="Container.Content(seasons)">$INFO[ListItem.Icon]</value> -->
+        <value condition="Container.Content(seasons)">$INFO[ListItem.Icon]</value>
         <value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value>$INFO[ListItem.Icon]</value>
@@ -125,5 +125,10 @@
         <value condition="!IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
         <value condition="!IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[Player.Art(tvshow.clearlogo)]</value>
         <value condition="!IsEmpty(Player.Art(clearlogo))">$INFO[Player.Art(clearlogo)]</value>
+    </variable>
+    <variable name="PVRThumb">
+        <value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
+        <value condition="Window.IsVisible(MyPVRRecordings.xml)">$INFO[ListItem.Thumb]</value>
+        <value condition="Window.IsVisible(DialogPVRInfo.xml)">$INFO[ListItem.Icon]</value>
     </variable>
 </includes>
