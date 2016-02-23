@@ -157,7 +157,7 @@
                 <onright>301</onright>
                 <preloaditems>2</preloaditems>
                 <orientation>horizontal</orientation>
-                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <autoscroll>false</autoscroll>
                 <scrolltime tween="quadratic">0</scrolltime>
                 <include>Animation.FadeIn</include>
                 <include>Animation.FadeOut</include>
@@ -180,7 +180,7 @@
                 <visible>IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                 <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                 <include>Animation.FadeIn</include>
-                <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                <autoscroll>false</autoscroll>
                 <top>330</top>
                 <left>518</left>
                 <width>1554</width>
