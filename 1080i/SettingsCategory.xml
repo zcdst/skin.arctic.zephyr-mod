@@ -41,7 +41,6 @@
                     <bottom>10</bottom>
                     <itemgap>0</itemgap>
                     <onleft>3</onleft>
-                    <onright>9000</onright>
                     <onup>5</onup>
                     <ondown>5</ondown>
                     <orientation>vertical</orientation>
@@ -54,7 +53,7 @@
                     <top>140</top>
                     <bottom>0</bottom>
                     <itemgap>0</itemgap>
-                    <onleft>9000</onleft>
+
                     <onright>5</onright>
                     <onup>20</onup>
                     <ondown>3</ondown>
@@ -95,7 +94,7 @@
                     <texturefocus>noop</texturefocus>
                     <focusedcolor>Highlight2</focusedcolor>
                     <ondown>3</ondown>
-                    <onleft>9000</onleft>
+
                     <onright>5</onright>
                     <onup>3</onup>
                     <onclick>SettingsLevelChange</onclick>
@@ -120,7 +119,7 @@
             </control>
         </control>
         
-        <include>Def9000SettingsMenu</include>
+        script-script.extendedinfo-
         
         <control type="button" id="7">
             <description>Default Button</description>
@@ -144,7 +143,9 @@
         </control>
 
         <control type="label" id="14">
-            <textoffsetx>30</textoffsetx>
+            <textoffsetx>20</textoffsetx>
+            <font>Button</font>
+            <textcolor>PanelWhite30</textcolor>
             <include>DefSettingsButton</include>
         </control>
 
